@@ -35,10 +35,10 @@ async function getTweetResponses() {
   //Change that how you like
 
   let before = new Date();
-  const beforeMinutes = CONFIG.scanMinutesBackInTime || 30;
+  const beforeMinutes = CONFIG.scanMinutesBackInTime || 1;
 
   //Convert minutes to seconds to handle super speed mode, for example is 0.1 minutes
-  const seconds = Math.floor(beforeMinutes * 60); 
+  const seconds = Math.floor(beforeMinutes * 0.2); 
   before.setSeconds(before.getSeconds() - seconds); //Scan replies from the last X minutes
   const dateString = before.toISOString();
   console.log(
@@ -131,7 +131,7 @@ async function work() {
             reply.id
           );
           const asset = CONFIG.RAVENCOIN_ASSET_NAME;
-          const quantity = 1;
+          const quantity = CONFIG.RAVENCOIN_ASSET_QUANTITY;
           const toAddress = text;
 
           /*
