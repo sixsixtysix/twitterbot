@@ -5,6 +5,7 @@
   "rpcPassword": "myMegaSecretPassword",
   "rpcURL": "http://127.0.0.1:8766",
   "RAVENCOIN_ASSET_NAME": "HOPIUM",
+  "RAVENCOIN_ASSET_QUANTITY": "1"
   "scanMinutesBackInTime": 5,
   "tweetId": "1111222233334444"
 }
