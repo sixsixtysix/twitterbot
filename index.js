@@ -35,10 +35,10 @@ async function getTweetResponses() {
   //Change that how you like
 
   let before = new Date();
-  const beforeMinutes = CONFIG.scanMinutesBackInTime || 1;
+  const beforeMinutes = CONFIG.scanMinutesBackInTime || 30;
 
   //Convert minutes to seconds to handle super speed mode, for example is 0.1 minutes
-  const seconds = Math.floor(beforeMinutes * 0.2); 
+  const seconds = Math.floor(beforeMinutes * 60); 
   before.setSeconds(before.getSeconds() - seconds); //Scan replies from the last X minutes
   const dateString = before.toISOString();
   console.log(
